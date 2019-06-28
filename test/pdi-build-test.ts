@@ -155,6 +155,10 @@ class AbstractPlatform implements pdi.Platform {
 	sendToExternal(playId: string, data: any): void {
 		throw new Error("abstractPlatform.sendToExternal");
 	}
+
+	destroy(): void {
+		throw new Error("abstractPlatform#destroy is undefined");
+	}
 }
 
 // ビルドされた js ファイルで pdi を require できることを確認するために必要
