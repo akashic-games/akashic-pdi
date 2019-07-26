@@ -89,4 +89,9 @@ export interface Platform {
 	 * @param data 送信するデータ
 	 */
 	sendToExternal(playId: string, data: any): void;
+
+	/**
+	 * コンテンツ中の全リソースの削除を行う。
+	 */
+	destroy?(): void;
 }
