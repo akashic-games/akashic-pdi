@@ -1,6 +1,6 @@
 {
   "name": "@akashic/akashic-pdi",
-  "version": "1.10.2",
+  "version": "1.10.3",
   "description": "Interface definition for Akashic Platform Dependent Implementation (PDI) Layer",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
