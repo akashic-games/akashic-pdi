@@ -93,5 +93,5 @@ export interface Platform {
 	/**
 	 * コンテンツ中の全リソースの削除を行う。
 	 */
-	destroy(): void;
+	destroy?(): void;
 }
