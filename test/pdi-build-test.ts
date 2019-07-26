@@ -126,5 +126,9 @@ class AbstractPlatform implements pdi.Platform {
 	sendToExternal(playId: string, data: any): void {
 		throw g.ExceptionFactory.createPureVirtualError("abstractPlatform.sendToExternal");
 	}
+
+	destroy(): void {
+		throw new Error("abstractPlatform#destroy is undefined");
+	}
 }
 
