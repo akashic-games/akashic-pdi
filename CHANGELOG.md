@@ -1,7 +1,7 @@
 # CHANGELOG
 
 ## 2.5.0
-* @akashic/amflowのminor更新に伴う更新
+* @akashic/amflowのminor更新に伴うバージョンアップ
 
 ## 2.4.2
 * Platformインターフェースに`destroy()`を新たに追加
