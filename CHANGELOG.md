@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.11.0
+* @akashic/amflowのminor更新に伴うバージョンアップ
+
 ## 1.10.3
 * Platformインターフェースに`destroy()`を新たに追加
 
