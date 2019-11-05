@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2.7.0
+* @akashic/akashic-engineのminor更新に伴うバージョンアップ
+
 ## 2.6.0
 * @akashic/akashic-engineのminor更新に伴うバージョンアップ
 
