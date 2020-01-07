@@ -133,7 +133,7 @@ class AbstractPlatform implements pdi.Platform {
 		this._renderReq = requirement;
 	}
 
-	getPrimarySurface(): g.Surface {
+	getPrimarySurface(): g.SurfaceLike {
 		return this._resourceFactory.createSurface(this._renderReq.primarySurfaceWidth, this._renderReq.primarySurfaceHeight);
 	}
 

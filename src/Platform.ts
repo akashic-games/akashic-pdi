@@ -49,13 +49,13 @@ export interface Platform {
 	 * プライマリサーフェスを取得する。
 	 * 実装者は、このメソッドの呼び出し以前に、 `setRendererRequirement()` が呼び出されていると仮定してよい。
 	 */
-	getPrimarySurface(): g.Surface;
+	getPrimarySurface(): g.SurfaceLike;
 
 	/**
 	 * ResourceFactoryを取得する。
 	 * 実装者は、このメソッドの呼び出し以前に、 `setRendererRequirement()` が呼び出されていると仮定してよい。
 	 */
-	getResourceFactory(): g.ResourceFactory;
+	getResourceFactory(): g.ResourceFactoryLike;
 
 
 	/**
