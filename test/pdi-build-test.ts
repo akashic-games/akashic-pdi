@@ -110,7 +110,7 @@ class AbstractResourceFactory extends g.ResourceFactory {
 // この箇所の型定義がビルドエラーを起こさないことがポイント
 class AbstractPlatform implements pdi.Platform {
 	amflow: AMFlow.AMFlow;
-	_resourceFactory: g.ResourceFactory;
+	_resourceFactory: AbstractResourceFactory;
 	_handler: pdi.PlatformEventHandler;
 	_renderReq: pdi.RendererRequirement;
 
