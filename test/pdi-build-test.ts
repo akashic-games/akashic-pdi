@@ -110,7 +110,7 @@ class AbstractResourceFactory extends g.ResourceFactory {
 // この箇所の型定義がビルドエラーを起こさないことがポイント
 class AbstractPlatform implements pdi.Platform {
 	amflow: AMFlow.AMFlow;
-	_resourceFactory: g.ResourceFactory;
+	_resourceFactory: AbstractResourceFactory;
 	_handler: pdi.PlatformEventHandler;
 	_renderReq: pdi.RendererRequirement;
 
@@ -133,7 +133,7 @@ class AbstractPlatform implements pdi.Platform {
 		this._renderReq = requirement;
 	}
 
-	getPrimarySurface(): g.SurfaceLike {
+	getPrimarySurface(): g.Surface {
 		return this._resourceFactory.createSurface(this._renderReq.primarySurfaceWidth, this._renderReq.primarySurfaceHeight);
 	}
 
