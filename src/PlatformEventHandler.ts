@@ -1,5 +1,5 @@
 import * as pl from "@akashic/playlog";
-import {PointEvent} from "./PointEvent";
+import * as g from "@akashic/akashic-engine";
 
 /**
  * プラットフォームで生じたイベントの受付口。
@@ -19,5 +19,5 @@ export interface PlatformEventHandler {
 	 * (PDI では `pl.PointDownEvent#5` (イベントが発生した位置にあるエンティティのID) などを解決することができない。)
 	 * @param ev: 追加するイベント
 	 */
-	onPointEvent(ev: PointEvent): void;
+	onPointEvent(ev: g.PlatformPointEvent): void;
 }
