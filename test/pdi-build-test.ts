@@ -160,8 +160,3 @@ class AbstractPlatform implements pdi.Platform {
 		throw new Error("abstractPlatform#destroy is undefined");
 	}
 }
-
-// ビルドされた js ファイルで pdi を require できることを確認するために必要
-pdi.PointType.Down === 0;
-pdi.PointType.Move === 1;
-pdi.PointType.Up === 2;
