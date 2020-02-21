@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2.8.0
+* @akashic/amflowと@akashic/playlogのmajor更新に伴うバージョンアップ
+
 ## 2.7.0
 * @akashic/akashic-engineのminor更新に伴うバージョンアップ
 
