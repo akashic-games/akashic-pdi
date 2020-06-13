@@ -1,8 +1,10 @@
 import {AMFlow} from "@akashic/amflow";
-import * as g from "@akashic/akashic-engine";
 import {Looper} from "./Looper";
+import {OperationPluginViewInfo} from "./OperationPluginViewInfo";
 import {PlatformEventHandler} from "./PlatformEventHandler";
 import {RendererRequirement} from "./RendererRequirement";
+import {ResourceFactoryLike} from "./ResourceFactoryLike";
+import {SurfaceLike} from "../surface/SurfaceLike";
 
 /**
  * Platform: PDIの主要なインターフェース。
@@ -38,7 +40,7 @@ export interface Platform {
 	 * このプラットフォームのRendererに対する要求を通知する。
 	 *
 	 * このメソッドの呼び出しは `getPrimarySurface()` および `getResourceFactory().createSurface()` の振る舞いに影響を与える。
-	 * 実装者は、このメソッドの呼び出し時、前回の呼び出し後に取得・生成された全ての `g.Surface` を `destroy()` してはならない。
+	 * 実装者は、このメソッドの呼び出し時、前回の呼び出し後に取得・生成された全ての `Surface` を `destroy()` してはならない。
 	 * また、実装者はこのメソッドの2度目以降の呼び出し時、プライマリサーフェスを `destroy()` させなければならない。
 	 * 引数が省略された場合、実装は Renderer に紐づくデータを解放してよい。
 	 * @param param Rendererに対する要求
@@ -49,13 +51,13 @@ export interface Platform {
 	 * プライマリサーフェスを取得する。
 	 * 実装者は、このメソッドの呼び出し以前に、 `setRendererRequirement()` が呼び出されていると仮定してよい。
 	 */
-	getPrimarySurface(): g.SurfaceLike;
+	getPrimarySurface(): SurfaceLike;
 
 	/**
 	 * ResourceFactoryを取得する。
 	 * 実装者は、このメソッドの呼び出し以前に、 `setRendererRequirement()` が呼び出されていると仮定してよい。
 	 */
-	getResourceFactory(): g.ResourceFactoryLike;
+	getResourceFactory(): ResourceFactoryLike;
 
 
 	/**
@@ -65,7 +67,7 @@ export interface Platform {
 	 * このメソッドが省略された場合、操作プラグインには代わりに `null` が渡される。
 	 * 実装者は、このメソッドの呼び出し以前に、 `setRendererRequirement()` が呼び出されていると仮定してよい。
 	 */
-	getOperationPluginViewInfo?(): g.OperationPluginViewInfo;
+	getOperationPluginViewInfo?(): OperationPluginViewInfo;
 
 	/**
 	 * 定期実行処理を作成する。
