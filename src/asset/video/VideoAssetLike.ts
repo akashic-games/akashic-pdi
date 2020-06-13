@@ -1,5 +1,5 @@
-import { AssetLike } from "./AssetLike";
-import { SurfaceLike } from "./SurfaceLike";
+import { AssetLike } from "../AssetLike";
+import { SurfaceLike } from "../../surface/SurfaceLike";
 import { VideoPlayerLike } from "./VideoPlayerLike";
 
 /**

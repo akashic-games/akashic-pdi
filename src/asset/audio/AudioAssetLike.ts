@@ -1,4 +1,4 @@
-import { AssetLike } from "./AssetLike";
+import { AssetLike } from "../AssetLike";
 import { AudioAssetHint } from "./AudioAssetHint";
 import { AudioPlayerLike } from "./AudioPlayerLike";
 import { AudioSystemLike } from "./AudioSystemLike";

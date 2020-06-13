@@ -1,5 +1,5 @@
 import { SurfaceAtlasLike } from "./SurfaceAtlasLike";
-import { SurfaceLike } from "./SurfaceLike";
+import { SurfaceLike } from "../surface/SurfaceLike";
 
 /**
  * グリフの領域を表すインターフェース。

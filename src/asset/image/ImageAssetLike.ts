@@ -1,6 +1,6 @@
-import { AssetLike } from "./AssetLike";
+import { AssetLike } from "../AssetLike";
 import { ImageAssetHint } from "./ImageAssetHint";
-import { SurfaceLike } from "./SurfaceLike";
+import { SurfaceLike } from "../../surface/SurfaceLike";
 
 /**
  * 画像リソースを表すインターフェース。

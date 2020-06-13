@@ -1,6 +1,6 @@
-import { CommonSize } from "./commons";
+import { CommonSize } from "../commons";
 import { SurfaceAtlasSlotLike } from "./SurfaceAtlasSlotLike";
-import { SurfaceLike } from "./SurfaceLike";
+import { SurfaceLike } from "../surface/SurfaceLike";
 
 /**
  * サーフェスアトラス。

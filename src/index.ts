@@ -1,4 +1,4 @@
-export { Looper } from "./Looper";
-export { Platform } from "./Platform";
-export { PlatformEventHandler } from "./PlatformEventHandler";
-export { RendererRequirement } from "./RendererRequirement";
+export { Looper } from "./platform/Looper";
+export { Platform } from "./platform/Platform";
+export { PlatformEventHandler } from "./platform/PlatformEventHandler";
+export { RendererRequirement } from "./platform/RendererRequirement";

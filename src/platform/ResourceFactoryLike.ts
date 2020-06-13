@@ -1,16 +1,16 @@
-import { AudioAssetHint } from "./AudioAssetHint";
-import { AudioAssetLike } from "./AudioAssetLike";
-import { AudioPlayerLike } from "./AudioPlayerLike";
-import { AudioSystemLike } from "./AudioSystemLike";
-import { FontWeightString } from "./FontWeightString";
-import { GlyphFactoryLike } from "./GlyphFactoryLike";
-import { ImageAssetLike } from "./ImageAssetLike";
-import { ScriptAssetLike } from "./ScriptAssetLike";
-import { SurfaceAtlasLike } from "./SurfaceAtlasLike";
-import { SurfaceLike } from "./SurfaceLike";
-import { TextAssetLike } from "./TextAssetLike";
-import { VideoAssetLike } from "./VideoAssetLike";
-import { VideoSystemLike } from "./VideoSystemLike";
+import { AudioAssetHint } from "../asset/audio/AudioAssetHint";
+import { AudioAssetLike } from "../asset/audio/AudioAssetLike";
+import { AudioPlayerLike } from "../asset/audio/AudioPlayerLike";
+import { AudioSystemLike } from "../asset/audio/AudioSystemLike";
+import { FontWeightString } from "../font/FontWeightString";
+import { GlyphFactoryLike } from "../font/GlyphFactoryLike";
+import { ImageAssetLike } from "../asset/image/ImageAssetLike";
+import { ScriptAssetLike } from "../asset/script/ScriptAssetLike";
+import { SurfaceAtlasLike } from "../font/SurfaceAtlasLike";
+import { SurfaceLike } from "../surface/SurfaceLike";
+import { TextAssetLike } from "../asset/text/TextAssetLike";
+import { VideoAssetLike } from "../asset/video/VideoAssetLike";
+import { VideoSystemLike } from "../asset/video/VideoSystemLike";
 
 /**
  * リソースの生成を行うインターフェース。

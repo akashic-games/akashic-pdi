@@ -1,4 +1,4 @@
-import { AssetLike } from "./AssetLike";
+import { AssetLike } from "../AssetLike";
 
 /**
  * 文字列リソースを表すインターフェース。

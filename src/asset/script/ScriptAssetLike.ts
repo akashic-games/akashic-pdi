@@ -1,4 +1,4 @@
-import { AssetLike } from "./AssetLike";
+import { AssetLike } from "../AssetLike";
 import { ScriptAssetRuntimeValue } from "./ScriptAssetRuntimeValue";
 
 /**
