@@ -3,8 +3,8 @@ import {Looper} from "./Looper";
 import {OperationPluginViewInfo} from "./OperationPluginViewInfo";
 import {PlatformEventHandler} from "./PlatformEventHandler";
 import {RendererRequirement} from "./RendererRequirement";
-import {ResourceFactoryLike} from "./ResourceFactoryLike";
-import {SurfaceLike} from "../surface/SurfaceLike";
+import {ResourceFactory} from "./ResourceFactory";
+import {Surface} from "../surface/Surface";
 
 /**
  * Platform: PDIの主要なインターフェース。
@@ -51,13 +51,13 @@ export interface Platform {
 	 * プライマリサーフェスを取得する。
 	 * 実装者は、このメソッドの呼び出し以前に、 `setRendererRequirement()` が呼び出されていると仮定してよい。
 	 */
-	getPrimarySurface(): SurfaceLike;
+	getPrimarySurface(): Surface;
 
 	/**
 	 * ResourceFactoryを取得する。
 	 * 実装者は、このメソッドの呼び出し以前に、 `setRendererRequirement()` が呼び出されていると仮定してよい。
 	 */
-	getResourceFactory(): ResourceFactoryLike;
+	getResourceFactory(): ResourceFactory;
 
 
 	/**

@@ -1,4 +1,4 @@
-import { AssetLike } from "../AssetLike";
+import { Asset } from "../Asset";
 import { ScriptAssetRuntimeValue } from "./ScriptAssetRuntimeValue";
 
 /**
@@ -10,7 +10,7 @@ import { ScriptAssetRuntimeValue } from "./ScriptAssetRuntimeValue";
  * ScriptAsset#executeによって、本リソースが表すスクリプトを実行し、その結果を受け取る事が出来る。
  * requireによる参照とは異なり、executeはキャッシュされないため、何度でも呼び出し違う結果を受け取ることが出来る。
  */
-export interface ScriptAssetLike extends AssetLike {
+export interface ScriptAsset extends Asset {
 	type: "script";
 	script: string;
 

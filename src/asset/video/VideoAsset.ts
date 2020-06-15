@@ -1,6 +1,6 @@
-import { AssetLike } from "../AssetLike";
-import { SurfaceLike } from "../../surface/SurfaceLike";
-import { VideoPlayerLike } from "./VideoPlayerLike";
+import { Asset } from "../Asset";
+import { Surface } from "../../surface/Surface";
+import { VideoPlayer } from "./VideoPlayer";
 
 /**
  * 動画リソースを表すインターフェース。
@@ -8,7 +8,7 @@ import { VideoPlayerLike } from "./VideoPlayerLike";
  * game.jsonによって定義された内容をもとに暗黙的に生成されたインスタンスを、
  * Scene#assets、またはGame#assetsによって取得して利用する。
  */
-export interface VideoAssetLike extends AssetLike {
+export interface VideoAsset extends Asset {
 	type: "video";
 	width: number;
 	height: number;
@@ -27,13 +27,13 @@ export interface VideoAssetLike extends AssetLike {
 	 */
 	realHeight: number;
 
-	asSurface(): SurfaceLike;
+	asSurface(): Surface;
 
-	play(_loop?: boolean): VideoPlayerLike;
+	play(_loop?: boolean): VideoPlayer;
 
 	stop(): void;
 
-	getPlayer(): VideoPlayerLike;
+	getPlayer(): VideoPlayer;
 
 	destroy(): void;
 }

@@ -1,5 +1,5 @@
-import { SurfaceAtlasLike } from "./SurfaceAtlasLike";
-import { SurfaceLike } from "../surface/SurfaceLike";
+import { SurfaceAtlas } from "./SurfaceAtlas";
+import { Surface } from "../surface/Surface";
 
 /**
  * グリフの領域を表すインターフェース。
@@ -17,7 +17,7 @@ export interface GlyphArea {
 /**
  * グリフ。
  */
-export interface GlyphLike {
+export interface Glyph {
 	/**
 	 * 文字コード。
 	 */
@@ -56,7 +56,7 @@ export interface GlyphLike {
 	 *
 	 * 描画すべき内容がない場合 `surface` は `undefined` である。
 	 */
-	surface: SurfaceLike | undefined;
+	surface: Surface | undefined;
 
 	/**
 	 * X軸方向についての描画位置調整量。
@@ -88,5 +88,5 @@ export interface GlyphLike {
 	 */
 	isSurfaceValid: boolean;
 
-	_atlas: SurfaceAtlasLike | null;
+	_atlas: SurfaceAtlas | null;
 }

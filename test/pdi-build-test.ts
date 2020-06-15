@@ -4,7 +4,6 @@
 
 import * as AMFlow from "@akashic/amflow";
 import * as playlog from "@akashic/playlog";
-import * as g from "@akashic/akashic-engine";
 import * as pdi from "../src";
 
 class MockLooper implements pdi.Looper {
@@ -78,32 +77,35 @@ class AbstractAMFlowClient implements AMFlow.AMFlow {
 	}
 }
 
-class AbstractResourceFactory extends g.ResourceFactory {
-	createImageAsset(id: string, assetPath: string, width: number, height: number): g.ImageAsset {
+class AbstractResourceFactory implements pdi.ResourceFactory {
+	createImageAsset(id: string, assetPath: string, width: number, height: number): pdi.ImageAsset {
 		throw new Error("AbstractResourceFactory#createImageAsset()");
 	}
-	createVideoAsset(id: string, assetPath: string, width: number, height: number, system: g.VideoSystem, loop: boolean, useRealSize: boolean): g.VideoAsset {
+	createVideoAsset(id: string, assetPath: string, width: number, height: number, system: pdi.VideoSystem, loop: boolean, useRealSize: boolean): pdi.VideoAsset {
 		throw new Error("AbstractResourceFactory#createVideoAsset()");
 	}
-	createAudioAsset(id: string, assetPath: string, duration: number, system: g.AudioSystem, loop: boolean, hint: g.AudioAssetHint): g.AudioAsset {
+	createAudioAsset(id: string, assetPath: string, duration: number, system: pdi.AudioSystem, loop: boolean, hint: pdi.AudioAssetHint): pdi.AudioAsset {
 		throw new Error("AbstractResourceFactory#createAudioAsset()");
 	}
-	createTextAsset(id: string, assetPath: string): g.TextAsset {
+	createTextAsset(id: string, assetPath: string): pdi.TextAsset {
 		throw new Error("AbstractResourceFactory#createTextAsset()");
 	}
-	createAudioPlayer(system: g.AudioSystem): g.AudioPlayer {
+	createAudioPlayer(system: pdi.AudioSystem): pdi.AudioPlayer {
 		throw new Error("AbstractResourceFactory#createAudioPlayer()");
 	}
-	createScriptAsset(id: string, assetPath: string): g.ScriptAsset {
+	createScriptAsset(id: string, assetPath: string): pdi.ScriptAsset {
 		throw new Error("AbstractResourceFactory#createScriptAsset()");
 	}
-	createSurface(width: number, height: number): g.Surface {
+	createSurface(width: number, height: number): pdi.Surface {
 		throw new Error("AbstractResourceFactory#createSurface()");
 	}
-	createGlyphFactory(fontFamily: g.FontFamily | string | (g.FontFamily | string)[],
+	createGlyphFactory(fontFamily: string | string[],
 	                   fontSize: number, baselineHeight?: number, fontColor?: string,
-	                   strokeWidth?: number, strokeColor?: string, strokeOnly?: boolean, fontWeight?: g.FontWeight): g.GlyphFactory {
+	                   strokeWidth?: number, strokeColor?: string, strokeOnly?: boolean, fontWeight?: pdi.FontWeightString): pdi.GlyphFactory {
 		throw new Error("AbstractResourceFactory#createGlyphFactory()");
+	}
+	createSurfaceAtlas(width: number, height: number): pdi.SurfaceAtlas {
+		throw new Error("AbstractResourceFactory#createSurfaceAtlas()");
 	}
 }
 
@@ -133,15 +135,15 @@ class AbstractPlatform implements pdi.Platform {
 		this._renderReq = requirement;
 	}
 
-	getPrimarySurface(): g.Surface {
+	getPrimarySurface(): pdi.Surface {
 		return this._resourceFactory.createSurface(this._renderReq.primarySurfaceWidth, this._renderReq.primarySurfaceHeight);
 	}
 
-	getResourceFactory(): g.ResourceFactory {
+	getResourceFactory(): pdi.ResourceFactory {
 		return this._resourceFactory;
 	}
 
-	getOperationPluginViewInfo(): g.OperationPluginViewInfo {
+	getOperationPluginViewInfo(): pdi.OperationPluginViewInfo {
 		return {
 			type: "original-invalid-view",
 			view: null

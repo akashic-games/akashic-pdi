@@ -1,16 +1,16 @@
 import { AudioAssetHint } from "../asset/audio/AudioAssetHint";
-import { AudioAssetLike } from "../asset/audio/AudioAssetLike";
-import { AudioPlayerLike } from "../asset/audio/AudioPlayerLike";
-import { AudioSystemLike } from "../asset/audio/AudioSystemLike";
+import { AudioAsset } from "../asset/audio/AudioAsset";
+import { AudioPlayer } from "../asset/audio/AudioPlayer";
+import { AudioSystem } from "../asset/audio/AudioSystem";
 import { FontWeightString } from "../font/FontWeightString";
-import { GlyphFactoryLike } from "../font/GlyphFactoryLike";
-import { ImageAssetLike } from "../asset/image/ImageAssetLike";
-import { ScriptAssetLike } from "../asset/script/ScriptAssetLike";
-import { SurfaceAtlasLike } from "../font/SurfaceAtlasLike";
-import { SurfaceLike } from "../surface/SurfaceLike";
-import { TextAssetLike } from "../asset/text/TextAssetLike";
-import { VideoAssetLike } from "../asset/video/VideoAssetLike";
-import { VideoSystemLike } from "../asset/video/VideoSystemLike";
+import { GlyphFactory } from "../font/GlyphFactory";
+import { ImageAsset } from "../asset/image/ImageAsset";
+import { ScriptAsset } from "../asset/script/ScriptAsset";
+import { SurfaceAtlas } from "../font/SurfaceAtlas";
+import { Surface } from "../surface/Surface";
+import { TextAsset } from "../asset/text/TextAsset";
+import { VideoAsset } from "../asset/video/VideoAsset";
+import { VideoSystem } from "../asset/video/VideoSystem";
 
 /**
  * リソースの生成を行うインターフェース。
@@ -19,33 +19,33 @@ import { VideoSystemLike } from "../asset/video/VideoSystemLike";
  * またこのクラスの各種アセット生成メソッドは、エンジンによって暗黙に呼び出されるものである。
  * 通常ゲーム開発者が呼び出す必要はない。
  */
-export interface ResourceFactoryLike {
-	createImageAsset(id: string, assetPath: string, width: number, height: number): ImageAssetLike;
+export interface ResourceFactory {
+	createImageAsset(id: string, assetPath: string, width: number, height: number): ImageAsset;
 
 	createVideoAsset(
 		id: string,
 		assetPath: string,
 		width: number,
 		height: number,
-		system: VideoSystemLike,
+		system: VideoSystem,
 		loop: boolean,
 		useRealSize: boolean
-	): VideoAssetLike;
+	): VideoAsset;
 
 	createAudioAsset(
 		id: string,
 		assetPath: string,
 		duration: number,
-		system: AudioSystemLike,
+		system: AudioSystem,
 		loop: boolean,
 		hint: AudioAssetHint
-	): AudioAssetLike;
+	): AudioAsset;
 
-	createTextAsset(id: string, assetPath: string): TextAssetLike;
+	createTextAsset(id: string, assetPath: string): TextAsset;
 
-	createAudioPlayer(system: AudioSystemLike): AudioPlayerLike;
+	createAudioPlayer(system: AudioSystem): AudioPlayer;
 
-	createScriptAsset(id: string, assetPath: string): ScriptAssetLike;
+	createScriptAsset(id: string, assetPath: string): ScriptAsset;
 
 	/**
 	 * Surface を作成する。
@@ -54,7 +54,7 @@ export interface ResourceFactoryLike {
 	 * @param width 幅(ピクセル、整数値)
 	 * @param height 高さ(ピクセル、整数値)
 	 */
-	createSurface(width: number, height: number): SurfaceLike;
+	createSurface(width: number, height: number): Surface;
 
 	/**
 	 * GlyphFactory を作成する。
@@ -82,7 +82,7 @@ export interface ResourceFactoryLike {
 		strokeColor?: string,
 		strokeOnly?: boolean,
 		fontWeight?: FontWeightString
-	): GlyphFactoryLike;
+	): GlyphFactory;
 
-	createSurfaceAtlas(width: number, height: number): SurfaceAtlasLike;
+	createSurfaceAtlas(width: number, height: number): SurfaceAtlas;
 }

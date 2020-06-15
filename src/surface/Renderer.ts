@@ -1,14 +1,14 @@
 import { CompositeOperationString } from "./CompositeOperationString";
 import { ImageData } from "./ImageData";
-import { ShaderProgramLike } from "./ShaderProgramLike";
-import { SurfaceLike } from "./SurfaceLike";
+import { ShaderProgram } from "./ShaderProgram";
+import { Surface } from "./Surface";
 
 /**
  * ゲームの描画を行うクラス。
  *
  * 描画は各エンティティによって行われる。通常、ゲーム開発者が本クラスを利用する必要はない。
  */
-export interface RendererLike {
+export interface Renderer {
 	begin(): void;
 
 	clear(): void;
@@ -25,7 +25,7 @@ export interface RendererLike {
 	 * @param destOffsetY 描画先のY座標。0以上の数値でなければならない
 	 */
 	drawImage(
-		surface: SurfaceLike,
+		surface: Surface,
 		offsetX: number,
 		offsetY: number,
 		width: number,
@@ -35,7 +35,7 @@ export interface RendererLike {
 	): void;
 
 	drawSprites(
-		surface: SurfaceLike,
+		surface: Surface,
 		offsetX: number[],
 		offsetY: number[],
 		width: number[],
@@ -74,7 +74,7 @@ export interface RendererLike {
 	 * 本Rendererにシェーダを設定する。
 	 * 引数に `null` が指定された場合、本Rendererに設定されているシェーダの設定を解除する。
 	 */
-	setShaderProgram(shaderProgram: ShaderProgramLike | null): void;
+	setShaderProgram(shaderProgram: ShaderProgram | null): void;
 
 	/**
 	 * 本Rendererの描画内容を表すImageDataを取得する。

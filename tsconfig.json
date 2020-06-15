@@ -5,7 +5,7 @@
     "noImplicitAny": true,
     "module": "commonjs",
     "declaration": true,
-    "removeComments": true,
+    "removeComments": false,
     "outDir": "./lib",
     "types": []
   },

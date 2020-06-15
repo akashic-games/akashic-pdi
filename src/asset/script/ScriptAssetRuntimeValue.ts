@@ -1,4 +1,4 @@
-import { ModuleLike } from "./ModuleLike";
+import { Module } from "./Module";
 
 /**
  * `ScriptAsset` の実行時、`g` 以下に加えられる値を定めた共通interface。
@@ -37,5 +37,5 @@ export interface ScriptAssetRuntimeValue extends ScriptAssetRuntimeValueBase {
 	/**
 	 * この `ScriptAsset` に対応するモジュール。
 	 */
-	module: ModuleLike;
+	module: Module;
 }

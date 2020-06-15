@@ -1,17 +1,17 @@
 import { CommonSize } from "../commons";
-import { SurfaceAtlasSlotLike } from "./SurfaceAtlasSlotLike";
-import { SurfaceLike } from "../surface/SurfaceLike";
+import { SurfaceAtlasSlot } from "./SurfaceAtlasSlot";
+import { Surface } from "../surface/Surface";
 
 /**
  * サーフェスアトラス。
  *
  * 与えられたサーフェスの指定された領域をコピーし一枚のサーフェスにまとめる。
  */
-export interface SurfaceAtlasLike {
+export interface SurfaceAtlas {
 	/**
 	 * @private
 	 */
-	_surface: SurfaceLike;
+	_surface: Surface;
 
 	/**
 	 * @private
@@ -27,7 +27,7 @@ export interface SurfaceAtlasLike {
 	 * @param width サーフェス内における矩形の幅。0より大きい数値でなければならない
 	 * @param height サーフェス内における矩形の高さ。0より大きい数値でなければならない
 	 */
-	addSurface(surface: SurfaceLike, offsetX: number, offsetY: number, width: number, height: number): SurfaceAtlasSlotLike | null;
+	addSurface(surface: Surface, offsetX: number, offsetY: number, width: number, height: number): SurfaceAtlasSlot | null;
 
 	/**
 	 * サーフェスアトラスの大きさを取得する。

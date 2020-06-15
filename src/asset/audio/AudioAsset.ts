@@ -1,7 +1,7 @@
-import { AssetLike } from "../AssetLike";
+import { Asset } from "../Asset";
 import { AudioAssetHint } from "./AudioAssetHint";
-import { AudioPlayerLike } from "./AudioPlayerLike";
-import { AudioSystemLike } from "./AudioSystemLike";
+import { AudioPlayer } from "./AudioPlayer";
+import { AudioSystem } from "./AudioSystem";
 
 /**
  * 音リソースを表すインターフェース。
@@ -11,15 +11,15 @@ import { AudioSystemLike } from "./AudioSystemLike";
  *
  * AudioAsset#playを呼び出す事で、その音を再生することが出来る。
  */
-export interface AudioAssetLike extends AssetLike {
+export interface AudioAsset extends Asset {
 	type: "audio";
 	data: any;
 	duration: number;
 	loop: boolean;
 	hint: AudioAssetHint;
-	_system: AudioSystemLike;
+	_system: AudioSystem;
 
-	play(): AudioPlayerLike;
+	play(): AudioPlayer;
 
 	stop(): void;
 

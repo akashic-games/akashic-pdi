@@ -1,4 +1,4 @@
-import { AssetLike } from "../AssetLike";
+import { Asset } from "../Asset";
 
 /**
  * 文字列リソースを表すインターフェース。
@@ -8,7 +8,7 @@ import { AssetLike } from "../AssetLike";
  *
  * TextAsset#dataによって、本リソースが保持する文字列を取得することが出来る。
  */
-export interface TextAssetLike extends AssetLike {
+export interface TextAsset extends Asset {
 	type: "text";
 	data: string;
 }

@@ -1,5 +1,5 @@
 import { FontWeightString } from "./FontWeightString";
-import { GlyphLike } from "./GlyphLike";
+import { Glyph } from "./Glyph";
 
 /**
  * グリフファクトリ。
@@ -8,7 +8,7 @@ import { GlyphLike } from "./GlyphLike";
  *
  * 本クラスのインスタンスをゲーム開発者が直接生成することはなく、ゲーム開発者が利用する必要もない。
  */
-export interface GlyphFactoryLike {
+export interface GlyphFactory {
 	/**
 	 * フォントファミリ。
 	 *
@@ -72,5 +72,5 @@ export interface GlyphFactoryLike {
 	 *
 	 * @param code 文字コード
 	 */
-	create(code: number): GlyphLike;
+	create(code: number): Glyph;
 }

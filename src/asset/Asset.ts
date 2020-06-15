@@ -12,13 +12,13 @@ export interface AssetLoadHandler {
 	 * @param asset 読み込みに失敗したアセット
 	 * @param error 失敗の内容を表すエラー
 	 */
-	_onAssetError(asset: AssetLike, error: AssetLoadError): void;
+	_onAssetError(asset: Asset, error: AssetLoadError): void;
 
 	/**
 	 * 読み込み完了の通知を受ける関数。
 	 * @param asset 読み込みが完了したアセット
 	 */
-	_onAssetLoad(asset: AssetLike): void;
+	_onAssetLoad(asset: Asset): void;
 }
 
 /**
@@ -27,12 +27,12 @@ export interface AssetLoadHandler {
  * game.jsonによって定義された内容をもとに暗黙的に生成されたインスタンスを、
  * Scene#assets、またはGame#assetsによって取得して利用する。
  */
-export interface AssetLike {
+export interface Asset {
 	id: string;
 	type: string;
 	path: string;
 	originalPath: string;
-	onDestroyed: Trigger<AssetLike>;
+	onDestroyed: Trigger<Asset>;
 
 	/**
 	 * 現在利用中で解放出来ない `Asset` かどうかを返す。

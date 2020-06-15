@@ -3,4 +3,4 @@
  * を担うインターフェース。VideoAssetはVideoSystemを持つという体裁を整えるために(中身が空であるが)
  * 定義されている。
  */
-export interface VideoSystemLike {}
+export interface VideoSystem {}

@@ -1,6 +1,6 @@
-import { AssetLike } from "../AssetLike";
+import { Asset } from "../Asset";
 import { ImageAssetHint } from "./ImageAssetHint";
-import { SurfaceLike } from "../../surface/SurfaceLike";
+import { Surface } from "../../surface/Surface";
 
 /**
  * 画像リソースを表すインターフェース。
@@ -11,12 +11,12 @@ import { SurfaceLike } from "../../surface/SurfaceLike";
  * width, heightでメタデータとして画像の大きさをとることは出来るが、
  * ゲーム開発者はそれ以外の情報を本クラスから直接は取得せず、Sprite等に本リソースを指定して利用する。
  */
-export interface ImageAssetLike extends AssetLike {
+export interface ImageAsset extends Asset {
 	type: "image";
 	width: number;
 	height: number;
 	hint: ImageAssetHint | undefined;
 
-	asSurface(): SurfaceLike;
+	asSurface(): Surface;
 	initialize(hint: ImageAssetHint | undefined): void;
 }

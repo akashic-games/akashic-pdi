@@ -1,6 +1,6 @@
 import { ShaderUniform } from "./ShaderUniform";
 
-export interface ShaderProgramLike {
+export interface ShaderProgram {
 	/**
 	 * フラグメントシェーダの文字列。
 	 *

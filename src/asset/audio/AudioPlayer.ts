@@ -1,9 +1,9 @@
 import { Trigger } from "@akashic/trigger";
-import { AudioAssetLike } from "./AudioAssetLike";
+import { AudioAsset } from "./AudioAsset";
 
 export interface AudioPlayerEvent {
-	player: AudioPlayerLike;
-	audio: AudioAssetLike;
+	player: AudioPlayer;
+	audio: AudioAsset;
 }
 
 /**
@@ -13,12 +13,12 @@ export interface AudioPlayerEvent {
  * または `AudioAsset#play()` によって暗黙的に生成される。
  * ゲーム開発者は本クラスのインスタンスを直接生成すべきではない。
  */
-export interface AudioPlayerLike {
+export interface AudioPlayer {
 	/**
 	 * 再生中のオーディオアセット。
 	 * 再生中のものがない場合、 `undefined` 。
 	 */
-	currentAudio: AudioAssetLike | undefined;
+	currentAudio: AudioAsset | undefined;
 
 	/**
 	 * `play()` が呼び出された時に通知される `Trigger` 。
@@ -62,7 +62,7 @@ export interface AudioPlayerLike {
 	 * 再生後、 `this.onPlay` がfireされる。
 	 * @param audio 再生するオーディオアセット
 	 */
-	play(audio: AudioAssetLike): void;
+	play(audio: AudioAsset): void;
 
 	/**
 	 * 再生を停止する。

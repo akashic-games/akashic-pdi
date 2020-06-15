@@ -1,10 +1,10 @@
 import { CommonSize } from "../commons";
-import { RendererLike } from "./RendererLike";
+import { Renderer } from "./Renderer";
 
 /**
  * 描画領域を表すインターフェース。
  */
-export interface SurfaceLike extends CommonSize {
+export interface Surface extends CommonSize {
 	/**
 	 * 描画領域の幅。
 	 * この値を直接書き換えてはならない。
@@ -27,7 +27,7 @@ export interface SurfaceLike extends CommonSize {
 	/**
 	 * このSurfaceへの描画手段を提供するRendererを生成して返す。
 	 */
-	renderer(): RendererLike;
+	renderer(): Renderer;
 
 	/**
 	 * このSurfaceが動画を再生中であるかどうかを判定する。

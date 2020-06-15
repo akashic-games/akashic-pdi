@@ -1,7 +1,7 @@
 /**
  * Node.js が提供する module の互換インターフェース。
  */
-export interface ModuleLike {
+export interface Module {
 	/**
 	 * モジュールのID。
 	 * アセットIDとは異なることに注意。
@@ -23,7 +23,7 @@ export interface ModuleLike {
 	 * このモジュールの親。一番最初にこのモジュール (のファイル) を require() したモジュール。
 	 * 該当するモジュールがなければ `null` である。
 	 */
-	parent: ModuleLike | null;
+	parent: Module | null;
 
 	/**
 	 * このモジュールの読み込みが完了しているか。
@@ -33,7 +33,7 @@ export interface ModuleLike {
 	/**
 	 * このモジュールが `require()` したモジュール。
 	 */
-	children: ModuleLike[];
+	children: Module[];
 
 	/**
 	 * このモジュール内で `require()` した時の検索先ディレクトリ。

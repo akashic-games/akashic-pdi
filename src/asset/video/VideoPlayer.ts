@@ -1,9 +1,9 @@
 import { Trigger } from "@akashic/trigger";
-import { VideoAssetLike } from "./VideoAssetLike";
+import { VideoAsset } from "./VideoAsset";
 
 export interface VideoPlayerEvent {
-	player: VideoPlayerLike;
-	video: VideoAssetLike | undefined;
+	player: VideoPlayer;
+	video: VideoAsset | undefined;
 }
 
 /**
@@ -11,12 +11,12 @@ export interface VideoPlayerEvent {
  *
  * ゲーム開発者は本クラスのインスタンスを直接生成すべきではない。
  */
-export interface VideoPlayerLike {
+export interface VideoPlayer {
 	/**
 	 * 再生中のビデオアセット。
 	 * 再生中のものがない場合、 `undefined` 。
 	 */
-	currentVideo: VideoAssetLike | undefined;
+	currentVideo: VideoAsset | undefined;
 
 	/**
 	 * `play()` が呼び出された時に通知される `Trigger` 。
@@ -60,7 +60,7 @@ export interface VideoPlayerLike {
 	 * 再生後、 `this.onPlay` がfireされる。
 	 * @param Video 再生するビデオアセット
 	 */
-	play(videoAsset: VideoAssetLike): void;
+	play(videoAsset: VideoAsset): void;
 
 	/**
 	 * 再生を停止する。
