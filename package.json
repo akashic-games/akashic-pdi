@@ -37,9 +37,9 @@
     "typescript": "^3.7.4"
   },
   "dependencies": {
-    "@akashic/akashic-engine": "~3.0.0-beta.8",
     "@akashic/amflow": "~1.0.0",
-    "@akashic/playlog": "~2.0.0"
+    "@akashic/playlog": "~2.0.0",
+    "@akashic/trigger": "~1.0.0"
   },
   "publishConfig": {
     "@akashic:registry": "https://registry.npmjs.org/",
