@@ -1,6 +1,6 @@
 {
   "name": "@akashic/akashic-pdi",
-  "version": "1.14.0",
+  "version": "1.15.0",
   "description": "Interface definition for Akashic Platform Dependent Implementation (PDI) Layer",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -42,8 +42,8 @@
   },
   "dependencies": {
     "@akashic/akashic-engine": "~1.14.0",
-    "@akashic/amflow": "~2.0.0",
-    "@akashic/playlog": "~3.0.0"
+    "@akashic/amflow": "~3.0.0",
+    "@akashic/playlog": "~3.1.0"
   },
   "publishConfig": {
     "@akashic:registry": "https://registry.npmjs.org/"
