@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2.10.0
+* @akashic/amflowのmajor更新と@akashic/playlogのminor更新に伴うバージョンアップ
+
 ## 2.9.0
 * @akashic/amflowと@akashic/playlogのmajor更新に伴うバージョンアップ
 
