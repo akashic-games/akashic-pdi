@@ -17,7 +17,7 @@
     "lint:textlint": "textlint -f pretty-error ./README.md",
     "lint:md": "remark ./*.md --frail --no-stdout --quiet --rc-path ./.remarkrc",
     "doc": "typedoc --out ./doc/ --target ES5 -name akashic-pdi --module commonjs",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
