@@ -12,7 +12,7 @@
     "build": "gulp compile",
     "test": "gulp && gulp test && npm run lint",
     "doc": "gulp typedoc",
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "lint": "npm run lint:tslint && npm run lint:textlint && npm run lint:md",
     "lint:tslint": "tslint --type-check -c tslint.json --project ./tsconfig.json",
     "lint:textlint": "textlint -f pretty-error ./README.md",
@@ -46,6 +46,7 @@
     "@akashic/playlog": "~3.1.0"
   },
   "publishConfig": {
-    "@akashic:registry": "https://registry.npmjs.org/"
+    "@akashic:registry": "https://registry.npmjs.org/",
+    "tag": "for_ae1x"
   }
 }
