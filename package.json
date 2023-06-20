@@ -26,8 +26,8 @@
   "author": "DWANGO Co., Ltd.",
   "license": "MIT",
   "devDependencies": {
-    "remark-cli": "~2.0.0",
-    "remark-lint": "~5.0.1",
+    "@akashic/remark-preset-lint": "^0.1.2",
+    "remark-cli": "^11.0.0",
     "textlint": "^5.2.0",
     "textlint-rule-max-ten": "^2.0.1",
     "textlint-rule-no-mix-dearu-desumasu": "^1.4.0",
