@@ -32,6 +32,15 @@ npm run build
 npm test
 ```
 
+## 開発者向け
+
+### 本ツールの publish について
+* 以下の手順を踏むことで publish が行われます。
+  1. package.json の version を更新したコミットを作成
+  2. 1 のコミットで master ブランチを更新する
+  3. GitHub Actions のリリースワークフローが実行される
+* package-lock.json が原因で publish に失敗した場合は、`npm i --before <実行時の7日前の日付(yyyy-mm-dd)>` を実行して package-lock.json を更新し、再度 publish 処理を行なってください。
+
 ## ライセンス
 本リポジトリは MIT License の元で公開されています。
 詳しくは [LICENSE](https://github.com/akashic-games/akashic-pdi/blob/master/LICENSE) をご覧ください。
